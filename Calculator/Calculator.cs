@@ -26,7 +26,16 @@ namespace Calculator
 
         public double Divide(double dividend, double devisor)
         {
-            return dividend / devisor;
+            if (devisor == 0)
+            {
+                throw new System.DivideByZeroException();
+            }
+
+            else
+            {
+                return dividend / devisor;
+            }
+            
         }
     }
 }
